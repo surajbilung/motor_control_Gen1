@@ -1,0 +1,7 @@
+<launch>
+	<node pkg="motors" type="baseMot.py" name="baseMot" />
+	<node pkg="motors" type="mainMot.py" name="mainMot" />
+	<node pkg="motors" type="secMot.py" name="secMot" />
+	<node pkg="motors" type="toolMot.py" name="toolMot" />
+	<node pkg="motors" type="master.py" name="master" />
+</launch>
