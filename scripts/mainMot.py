@@ -1,4 +1,4 @@
-#!/home/mhyde/vEnvs/rosPy/bin/python
+#!/home/pi/vEnvs/rosPy/bin/python
 
 '''
 The main motor node. All motor nodes share identical structure but subscribe to

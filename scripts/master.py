@@ -1,4 +1,4 @@
-#!/home/mhyde/vEnvs/rosPy/bin/python
+#!/home/pi/vEnvs/rosPy/bin/python
 
 '''
 Master ROS Node. Responsible for solving arm angles and distributing them to each arm.
@@ -13,7 +13,7 @@ from rospy import Publisher, init_node, Rate, loginfo, ROSInterruptException, is
 from std_msgs.msg import Float32MultiArray
 
 #HOME#
-dataFrame = DataFrame(read_csv("~/Documents/catkin_ws/src/motors/scripts/testCoordinates.csv", sep=","))
+dataFrame = DataFrame(read_csv("~/catkin_ws/src/motors/scripts/testCoordinates.csv", sep=","))
 
 #WORK#
 #dataFrame = DataFrame(read_csv("U:\\Documents\\GitCode\\Robot-Arm\\testCoordinates.csv", sep=","))
