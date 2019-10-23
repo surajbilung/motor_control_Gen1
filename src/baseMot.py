@@ -6,7 +6,7 @@ their respective topics and are defined by unique GPIO Pins.
 '''
 
 from rospy import loginfo, init_node, Subscriber, spin
-from std_msgs.msg import Float32MultiArray
+from motors.msg import DOFArray
 from motorControls import axisMotor
 
 #home ang = 0
@@ -17,8 +17,8 @@ def baseAngCall(data):
     '''
     Logs the angle calculated by the master and feeds it to the base motor.
     '''
-    loginfo(data.data[0])
-    baseAng = data.data[0]
+    loginfo(data.baseAng)
+    baseAng = data.baseAng
     baseMot.moveToAngle(baseAng)
 
 def baseMotNode():
@@ -26,7 +26,7 @@ def baseMotNode():
     Subscriber Node for the base motor.
     '''
     init_node('baseMotor', anonymous=True)
-    Subscriber('motAngs', Float32MultiArray, baseAngCall)
+    Subscriber('motAngs', DOFArray, baseAngCall)
     spin()
 
 if __name__ == '__main__':

@@ -61,7 +61,6 @@ class axisMotor:
             steps = abs(steps)
             self.piPins.write(self.directionPin, 1)
         else:
-            steps = steps
             self.piPins.write(self.directionPin, 0)
         return steps
 
