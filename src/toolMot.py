@@ -1,4 +1,4 @@
-#!/home/pi/vEnvs/rosPy/bin/python
+#!/home/ubuntu/vEnvs/rosPy/bin/python
 
 '''
 The tool motor node. All motor nodes share identical structure but subscribe to

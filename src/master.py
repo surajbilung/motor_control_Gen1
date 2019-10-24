@@ -1,4 +1,4 @@
-#!/home/pi/vEnvs/rosPy/bin/python
+#!/home/ubuntu/vEnvs/rosPy/bin/python
 
 '''
 Master ROS Node. Responsible for solving arm angles and distributing them to each arm.

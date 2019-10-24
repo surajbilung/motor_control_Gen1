@@ -1,4 +1,4 @@
-#!/home/pi/vEnvs/rosPy/bin/python
+#!/home/ubuntu/vEnvs/rosPy/bin/python
 
 '''
 The following classes and functions control a 4-DOF robotic arm with the option to add a "Tool Head"
