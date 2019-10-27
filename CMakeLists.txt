@@ -9,6 +9,7 @@ project(motors)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   rospy
+  roscpp
   std_msgs
   message_generation
 )
@@ -104,8 +105,8 @@ add_message_files(
 catkin_package(
   #INCLUDE_DIRS include
   LIBRARIES motors
-  CATKIN_DEPENDS rospy std_msgs message_runtime
-  DEPENDS system_lib
+  CATKIN_DEPENDS roscpp rospy std_msgs message_runtime
+  #DEPENDS system_lib
 )
 
 ###########
@@ -203,3 +204,7 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+add_executable(dataHandle src/dataHandle.cpp)
+target_link_libraries(dataHandle ${catkin_LIBRARIES})
+add_dependencies(dataHandle motors)
