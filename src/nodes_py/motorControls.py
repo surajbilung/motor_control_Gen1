@@ -119,9 +119,9 @@ def baseAngle(xComp, yComp): ### I HATE THIS FUNCTION ###
     are also accounted for.
     '''
     angleCalc = lambda signCorrection: ((atan2(yComp, xComp)) * 180 / pi) + signCorrection
-    if yComp > 0:
+    if yComp > 0 and xComp != 0:
         baseAng = angleCalc(0)
-    elif yComp < 0:
+    elif yComp < 0 and xComp != 0:
         baseAng = angleCalc(360)
     elif xComp == 0 and yComp > 0:
         baseAng = 90
