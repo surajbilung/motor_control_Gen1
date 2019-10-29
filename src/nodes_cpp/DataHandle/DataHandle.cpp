@@ -24,28 +24,22 @@ bool DataHandle::positionVectorCheck(){
 
 float DataHandle::baseAngle(){
     float baseAng;
-    if (yComp > 0)
-    {
+    if (yComp > 0){
         baseAng = (atan2(yComp, xComp)) * 180 / PI;
     }
-    else if (yComp < 0)
-    {
+    else if (yComp < 0){
         baseAng = ((atan2(yComp, xComp)) * 180 / PI) + 360;
     }
-    else if (xComp == 0 && yComp > 0)
-    {
+    else if (xComp == 0 && yComp > 0){
         baseAng = 90;
     }
-    else if (xComp == 0 && yComp < 0)
-    {
+    else if (xComp == 0 && yComp < 0){
         baseAng = 270;
     }
-    else if (xComp > 0 && yComp == 0)
-    {
+    else if (xComp > 0 && yComp == 0){
         baseAng = 0;
     }
-    else if (xComp < 0 && yComp == 0)
-    {
+    else if (xComp < 0 && yComp == 0){
         baseAng = 180;
     }
 
