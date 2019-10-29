@@ -205,6 +205,17 @@ include_directories(
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
 
-add_executable(dataHandle src/dataHandle.cpp)
-target_link_libraries(dataHandle ${catkin_LIBRARIES})
-add_dependencies(dataHandle motors)
+add_executable(master src/nodes_cpp/master.cpp src/nodes_cpp/DataHandle/DataHandle.cpp)
+target_link_libraries(master ${catkin_LIBRARIES})
+
+add_executable(baseMot src/nodes_cpp/baseMot.cpp src/nodes_cpp/AxisMotor/AxisMotor.cpp)
+target_link_libraries(baseMot ${catkin_LIBRARIES})
+
+add_executable(mainMot src/nodes_cpp/mainMot.cpp src/nodes_cpp/AxisMotor/AxisMotor.cpp)
+target_link_libraries(mainMot ${catkin_LIBRARIES})
+
+add_executable(secMot src/nodes_cpp/secMot.cpp src/nodes_cpp/AxisMotor/AxisMotor.cpp)
+target_link_libraries(secMot ${catkin_LIBRARIES})
+
+add_executable(toolMot src/nodes_cpp/toolMot.cpp src/nodes_cpp/AxisMotor/AxisMotor.cpp)
+target_link_libraries(toolMot ${catkin_LIBRARIES})
