@@ -3,8 +3,11 @@
 #include "DataHandle/DataHandle.h"
 #include <sstream>
 
-int main(int argc, char **argv) 
-{
+int xCoor[5] = {0, 2, 0, -2, 0};
+int yCoor[5] = {2, 0, -2, 0, 2};
+int zCoor[5] = {2, 2, 2, 2, 2};
+
+int main(int argc, char **argv) {
     
     // Initiate a new ROS Node named Talker
     ros::init(argc, argv, "master");
@@ -14,10 +17,10 @@ int main(int argc, char **argv)
     // send a string msg
     ros::Publisher motAngs = node.advertise<motors::DOFArray>("motAngs", 1000);
     // Use ros::Rate to set the frequency of advertising
-    ros::Rate rate(0.5); // One message per second
+    ros::Rate rate(2); // One message per second
 
-    while (ros::ok()) // Spin until keyboard interrupt (Ctrl + C)
-    {
+    // Spin until keyboard interrupt (Ctrl + C)
+    while (ros::ok()) {
         // Create a new msg (String) and create a string for the data
         motors::DOFArray msg;
         // Publish the message
@@ -26,7 +29,7 @@ int main(int argc, char **argv)
         ros::spinOnce();
         // Sleep for the cycle set by Rate class
         rate.sleep();
-    }
+        }
 
     return 0;
 }
