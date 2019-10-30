@@ -5,8 +5,8 @@ The base motor node. All motor nodes share identical structure but subscribe to
 their respective topics and are defined by unique GPIO Pins.
 '''
 
-from rospy import loginfo, init_node, Subscriber, spin
 from motors.msg import DOFArray
+from rospy import loginfo, init_node, Subscriber, spin
 from motorControls import axisMotor
 
 #home ang = 0
