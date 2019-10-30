@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="motors" type="baseMot" name="baseMot" />
+	<node pkg="motors" type="mainMot" name="mainMot" />
+	<node pkg="motors" type="secMot" name="secMot" />
+	<node pkg="motors" type="toolMot" name="toolMot" />
+</launch>
