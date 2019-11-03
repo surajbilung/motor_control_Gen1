@@ -56,7 +56,7 @@ class axisMotor:
         Considers if the new angle is clockwise or counter clockwise from the current position
         then sets the direction pin based on what it sees.
         '''
-        steps = ((float(angle) - self.memory[0]) / 360) * 800
+        steps = ((float(angle) - self.memory[0]) / 360) * 200
         if steps < 0:
             steps = abs(steps)
             self.piPins.write(self.directionPin, 1)
@@ -68,7 +68,7 @@ class axisMotor:
         '''
         Determines the time between the rising and falling edges of the psuedo PWM signal.
         '''
-        return 1 / ((float(self.rpm) * 800) / 60)
+        return 1 / ((float(self.rpm) * 200) / 60)
 
     def moveToAngle(self, angle):
         '''
